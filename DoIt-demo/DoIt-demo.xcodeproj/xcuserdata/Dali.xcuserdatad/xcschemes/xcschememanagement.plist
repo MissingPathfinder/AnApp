@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DoItApp.xcscheme</key>
+		<key>DoIt-demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2B8994D81CA3C14E0084E61A</key>
+		<key>2B8995121CA3C2450084E61A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B8994EC1CA3C14E0084E61A</key>
+		<key>2B8995281CA3C2460084E61A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B8994F71CA3C14E0084E61A</key>
+		<key>2B8995331CA3C2460084E61A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    @IBOutlet weak var detailTitle: UITextField!
+    @IBOutlet weak var detailContent: UITextView!
+    var content:AnyObject?
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -23,18 +23,38 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+            if let title = self.detailTitle {
+                title.text = detail.description
             }
         }
+    }
+    
+    func editDetail(sender: AnyObject) {
+        detailTitle.enabled = true
+        detailContent.editable = true
+        detailContent.selectable = true
+        detailContent.selectAll(detailContent)
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(DetailViewController.saveDetail(_:)))
+        self.navigationItem.rightBarButtonItem = saveButton
+    }
+    
+    func saveDetail(sender: AnyObject) {
+        detailTitle.enabled = false
+        detailContent.editable = false
+        detailContent.selectable = false
+        detailContent.selectAll(detailContent)
+        let editButton = UIBarButtonItem(barButtonSystemItem: .Edit , target: self, action: #selector(DetailViewController.editDetail(_:)))
+        self.navigationItem.rightBarButtonItem = editButton
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let editButton = UIBarButtonItem(barButtonSystemItem: .Edit , target: self, action: #selector(DetailViewController.editDetail(_:)))
+        self.navigationItem.rightBarButtonItem = editButton
         self.configureView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

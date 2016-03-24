@@ -488,6 +488,7 @@
 				2B388AA41C9EF17C00F4AC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B388AA51C9EF17C00F4AC6C /* Build configuration list for PBXNativeTarget "DoItAppTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +497,7 @@
 				2B388AA71C9EF17C00F4AC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B388AA81C9EF17C00F4AC6C /* Build configuration list for PBXNativeTarget "DoItAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +506,7 @@
 				2B388AAA1C9EF17C00F4AC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

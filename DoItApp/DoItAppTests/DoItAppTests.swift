@@ -2,8 +2,8 @@
 //  DoItAppTests.swift
 //  DoItAppTests
 //
-//  Created by Dali Lin on 16/3/24.
-//  Copyright © 2016年 Dali Lin. All rights reserved.
+//  Created by Dali Lin on 16/4/4.
+//  Copyright © 2016年 Rain. All rights reserved.
 //
 
 import XCTest

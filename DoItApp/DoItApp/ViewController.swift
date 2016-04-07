@@ -12,7 +12,8 @@ import CoreData
 class ViewController: UIViewController {
 
     var context:NSManagedObjectContext!
-    
+    var dataArr:Array<AnyObject> = []
+
 
     
     override func viewDidLoad() {
@@ -74,12 +75,33 @@ class ViewController: UIViewController {
     }
     
     @IBAction func GetDetail(sender: UIButton) {
+     
+        let f = NSFetchRequest(entityName:"Things")
+        do{
+            dataArr = try context.executeFetchRequest(f)
+        }catch{}
+        let one = dataArr[dataArr.count-1].valueForKey("detail")
+        let two = dataArr[dataArr.count-1].valueForKey("detail2")
+        let three = dataArr[dataArr.count-1].valueForKey("detail3")
+      
+
+        
+        doitFirst.text = "\(one!)"
+        doitSecond.text = "\(two!)"
+        doitThird.text = "\(three!)"
+        
+        countValue = 0
+        if doitFirst.text != "" {countValue += 1}
+        if doitSecond.text != "" {countValue += 1}
+        if doitThird.text != "" {countValue += 1}
         
     }
     
     @IBAction func SetDetail(sender: UIButton) {
         let row:AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Things", inManagedObjectContext: context)
         row.setValue(doitFirst.text, forKey: "detail")
+        row.setValue(doitSecond.text, forKey: "detail2")
+        row.setValue(doitThird.text, forKey: "detail3")
         do{
             try context.save()
         }catch{

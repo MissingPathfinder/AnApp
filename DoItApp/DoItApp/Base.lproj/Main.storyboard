@@ -68,7 +68,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y3i-lA-Jd8">
                                 <rect key="frame" x="39" y="367" width="104" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="count &amp; save"/>
+                                <state key="normal" title="count"/>
                                 <connections>
                                     <action selector="countIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ON5-Bx-VLW"/>
                                 </connections>
